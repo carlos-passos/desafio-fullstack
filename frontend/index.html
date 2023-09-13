@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+       <meta charset="utf-8"/>
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+       <title>Desafio Fullstack Netdeal</title>
+       <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+       <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js" integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
+       <script>
+        $( function() {
+          $( "#tabs" ).tabs();
+          $( "#office" ).selectmenu();
+        } );
+        </script>
+    </head>
+   <body>
+       <div id="tabs">
+            <ul>
+                <li><a href="#employee">Colaboradores</a></li>
+                <li><a href="#hierarchy">Hierarquia</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+            </ul>
+            <div id="employee">
+                <form>
+                    <p>
+                        <label for="name">Nome</label><br/>
+                        <input id="name" type="text" name="name"/>
+                    </p>
+                    <p>
+                        <label for="password">Senha</label><br/>
+                        <input id="password" type="password" name="password"/>
+                    </p>
+                    <p>
+                        <label for="name">Cargo</label><br/>
+                        <select name="office" id="office">
+                            <option>Analista</option>
+                            <option>Gerente</option>
+                            <option selected="selected">Presidente</option>
+                        </select>
+                    </p>
+                    <p>
+                        <button class="ui-button ui-widget ui-corner-all">Salvar</button>
+                    </p>
+                </form>
+            </div>
+            <div id="hierarchy">
+                <form>
+                    <p>
+                        <label for="office">Cargo</label><br/>
+                        <input id="office" type="text" name="office"/>
+                    </p>
+                    <p>
+                        <label for="level">Nivel</label><br/>
+                        <input id="level" type="number" name="level"/>
+                    </p>
+                    <p>
+                        <button class="ui-button ui-widget ui-corner-all">Salvar</button>
+                    </p>
+                </form>
+            </div>
+            <div id="dashboard">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nome</th>
+                            <th>Cargo</th>
+                            <th>Senha</th>
+                            <th>Requisitos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>Fred Flintstone</td>
+                            <td>Analista</td>
+                            <td>Ruim</td>
+                            <td>40%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+   </body>
+</html>
