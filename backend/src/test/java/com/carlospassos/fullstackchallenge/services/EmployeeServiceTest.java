@@ -8,18 +8,11 @@ import com.carlospassos.fullstackchallenge.repositories.HierarchyRepository;
 import com.carlospassos.fullstackchallenge.rules.EmployeeRules;
 import com.carlospassos.fullstackchallenge.rules.PasswordLevelRules;
 import com.carlospassos.fullstackchallenge.schemas.EmployeePayload;
-import com.carlospassos.fullstackchallenge.schemas.PasswordLevel;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import org.springframework.test.util.ReflectionTestUtils;
-
-import java.util.Optional;
-
-import static org.mockito.Mockito.*;
 
 @ExtendWith(SpringExtension.class)
 class EmployeeServiceTest {

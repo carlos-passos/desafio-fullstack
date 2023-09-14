@@ -10,10 +10,11 @@ import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface HierarchyMapper {
+
     @Mapping(target = "id", source = "hierarchyId")
     Hierarchy toResponse(HierarchyEntity entity);
 
-    List<Hierarchy> toResponse(List<HierarchyEntity> entity);
+    List<Hierarchy> toResponses(List<HierarchyEntity> entity);
 
     HierarchyEntity toEntity(HierarchyPayload payload);
 }

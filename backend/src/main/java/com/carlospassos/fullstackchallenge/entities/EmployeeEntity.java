@@ -2,9 +2,10 @@ package com.carlospassos.fullstackchallenge.entities;
 
 import com.carlospassos.fullstackchallenge.schemas.PasswordLevel;
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter @Setter
 @Entity
 @Table(name = "TB_EMPLOYEE")
 public class EmployeeEntity {
@@ -24,7 +25,7 @@ public class EmployeeEntity {
     @Enumerated(value = EnumType.STRING)
     private PasswordLevel passwordLevel;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "HIERARCHY_ID")
     private HierarchyEntity hierarchy;
 

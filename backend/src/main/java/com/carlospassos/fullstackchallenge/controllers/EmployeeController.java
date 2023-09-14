@@ -28,7 +28,7 @@ public class EmployeeController {
         return ResponseEntity.ok(employees);
     }
 
-    @GetMapping("/hierarchies/superior-employees/{superiorEmployeeId}")
+    @GetMapping("/superior-employees/{superiorEmployeeId}")
     public ResponseEntity<List<Employee>> findSuperiorEmployee(@PathVariable Long superiorEmployeeId) {
         List<Employee> employees = service.findSuperiorEmployee(superiorEmployeeId);
         if (employees.isEmpty()) {

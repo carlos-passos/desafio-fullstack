@@ -1,11 +1,11 @@
 package com.carlospassos.fullstackchallenge.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.util.List;
 
-@Data
+@Getter @Setter
 @Entity
 @Table(name = "TB_HIERARCHY")
 public class HierarchyEntity {

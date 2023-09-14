@@ -11,4 +11,4 @@ Desafio FullStack
 http://localhost:8080/swagger-ui/
 
 ## Acesso ao front-end
-`frontend > index.html`
+http://localhost:8080/
